@@ -1,0 +1,9 @@
+# Compiled
+node_modules
+dist
+
+# Config
+**/config.json
+
+# Zip
+*.zip
