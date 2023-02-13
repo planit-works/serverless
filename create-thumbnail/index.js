@@ -12,7 +12,7 @@ export const handler = async (event, context, callback) => {
     event.Records[0].s3.object.key.replace(/\+/g, ' '),
   );
   const dstBucket = `${srcBucket}-resized`;
-  const dstKey = `${srcKey}-resized`;
+  const dstKey = `${srcKey}`;
 
   //   const typeMatch = srcKey.match(/\.([^.]*)$/);
   //   if (!typeMatch) {
