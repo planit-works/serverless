@@ -3,7 +3,7 @@ const { EmbedBuilder, WebhookClient } = require('discord.js');
 const scrumAlarmHookUrl = process.env.DISCORD_ALARM_HOOK_URL;
 const iconURL = process.env.DISCORD_BOT_AVATAR;
 
-module.exports.handler = async function (event) {
+export const handler = async (event) => {
   const type = event.resources.at(0);
   let title, description, content;
   if (type === process.env.JIRA_EVENT_TYPE) {

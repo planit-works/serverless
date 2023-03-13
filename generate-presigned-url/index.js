@@ -9,7 +9,10 @@ const s3 = new S3Client({
   },
 });
 
-module.exports.handler = async function (event) {
+export const handler = async (event) => {
+  if (event.body.type === 'PreventColdStart') {
+    return { statusCode: 204 };
+  }
   const body = JSON.parse(event.body);
   const { folder } = body;
   const params = {
